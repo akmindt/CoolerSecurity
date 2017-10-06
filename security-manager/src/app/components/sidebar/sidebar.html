@@ -1,0 +1,14 @@
+<mat-sidenav-container class="sidebar-container">
+    <mat-sidenav #sidenav class="sidebar-sidenav">
+        {{ Search }}
+        {{ NewButton }}
+        {{ Edit Button}}
+    </mat-sidenav>
+  
+    <div class="sidebar-sidenav-content">
+      <button type="button" mat-button (click)="sidenav.open()">
+        Menu
+      </button>
+    </div>
+  
+  </mat-sidenav-container>

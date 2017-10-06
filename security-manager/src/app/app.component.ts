@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Http} from '@angular/http';
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map'
 export class AppComponent {
   myData: Array<any>;
 
-  constructor(private http:Http){
+  constructor(private http: Http) {
     this.http.get('https://jsonplaceholder.typicode.com/photos').map(response => response.json()).subscribe(res => this.myData = res);
   }
 }
