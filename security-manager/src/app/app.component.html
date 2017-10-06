@@ -5,8 +5,7 @@
 </mat-toolbar>
 
 <mat-menu #appMenu="matMenu">
-  <button mat-menu-item> Add User </button>
-  <button mat-menu-item> Edit/Remove User </button>
+  <button mat-menu-item>{{ Sidebar }} Sidebar </button>
 </mat-menu>
 
 <mat-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
