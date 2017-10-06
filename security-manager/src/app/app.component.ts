@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Sidebar} from './components/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',

@@ -5,7 +5,8 @@
 </mat-toolbar>
 
 <mat-menu #appMenu="matMenu">
-  <button mat-menu-item>{{ Sidebar }} Sidebar </button>
+    <button mat-menu-item> TEXT </button>
+    <button mat-menu-item> MORE TEXT </button>
 </mat-menu>
 
 <mat-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
@@ -16,8 +17,7 @@
   </mat-card-header>
 
   <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-button>{{ Sidebar }} Menu </button>
   </mat-card-actions>
 
 </mat-card>
