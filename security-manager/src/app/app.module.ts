@@ -6,7 +6,7 @@ import {UserService} from './services/user/user-service';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatExpansionModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,10 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
+    MatExpansionModule,
+    MatIconModule,
     MatMenuModule,
-    MatToolbarModule,
-    MatIconModule
+    MatToolbarModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

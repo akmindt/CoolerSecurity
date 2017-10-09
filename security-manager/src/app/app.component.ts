@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import 'rxjs/add/operator/map';
 import {User, UserService} from './services/user/user-service';
 
 @Component({
