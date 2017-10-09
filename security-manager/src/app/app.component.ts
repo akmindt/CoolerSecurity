@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {User, UserService} from './services/user/user-service';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+import {Sidebar} from './components/sidebar/sidebar';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +11,7 @@ import {User, UserService} from './services/user/user-service';
 export class AppComponent {
   myData: Array<any>;
 
-  constructor(private userService: UserService) {
-    this.myData = this.userService.getUsers();
+  constructor(private http: Http) {
+    this.http.get('https://jsonplaceholder.typicode.com/photos').map(response => response.json()).subscribe(res => this.myData = res);
   }
 }

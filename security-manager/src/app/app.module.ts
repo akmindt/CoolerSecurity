@@ -6,7 +6,12 @@ import {UserService} from './services/user/user-service';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+<<<<<<< HEAD
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatExpansionModule } from '@angular/material';
+=======
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import {Sidebar} from './components/sidebar/sidebar';
+>>>>>>> 8a47a137d625384f6b0597900ab9e3e26a685d82
 
 @NgModule({
   declarations: [
