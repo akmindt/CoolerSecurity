@@ -33,8 +33,8 @@ const users = [
         'groups': ['tyler']
     },
     {
-        'id': 'rross',
-        'name': 'Rick Ross',
+        'id': 'rmconnell',
+        'name': 'Ross McConnell',
         'imgUrl': 'http://placehold.it/150',
         'groups': ['web_users', 'admin']
     },
@@ -45,8 +45,8 @@ const users = [
         'groups': ['public-users', 'public_web_users']
     },
     {
-        'id': 'jjimson',
-        'name': 'Jim Jimson',
+        'id': 'rwakefield',
+        'name': 'Russ Wakefield',
         'imgUrl': 'http://placehold.it/150',
         'groups': ['hype_users', 'web_beast_users']
     }
