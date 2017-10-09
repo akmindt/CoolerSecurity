@@ -8,11 +8,11 @@
   <button mat-menu-item>{{ Sidebar }} Sidebar </button>
 </mat-menu>
 
-<mat-card *ngFor="let data of (myData ? myData.slice(0,10): []); let i = index">
+<mat-card *ngFor="let data of myData; let i = index">
 
-  <img mat-card-image src="{{ data.url }}">
+  <img mat-card-image src="{{ data.imgUrl}}">
   <mat-card-header>
-    <mat-card-title>{{ data.title }}</mat-card-title>
+    <mat-card-title>{{ data.name }}</mat-card-title>
   </mat-card-header>
 
   <mat-card-actions>
