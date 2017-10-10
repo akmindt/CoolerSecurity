@@ -5,14 +5,14 @@ import {HttpModule} from '@angular/http';
 import {UserService} from './services/user/user-service';
 import {GroupService} from './services/group/group-service';
 import { AppComponent } from './app.component';
-import {Sidebar} from './components/sidebar/sidebar';
+import { Sidebar } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatExpansionModule, MatTabsModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatExpansionModule, MatTabsModule, MatSidenavModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, Sidebar
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,8 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
     MatIconModule,
     MatMenuModule,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule
   ],
   providers: [UserService, GroupService],
   bootstrap: [AppComponent]

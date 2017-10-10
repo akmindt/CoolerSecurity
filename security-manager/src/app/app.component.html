@@ -1,33 +1,41 @@
-<mat-toolbar color="primary">
-  <span>Eagle Software - Security Manager</span>
-  <span class="example-spacer"></span>
-  <button mat-button [matMenuTriggerFor]="appMenu"><mat-icon>menu</mat-icon> Menu</button>
+<mat-sidenav-container class="sidebar-container" mode="side">
+    <mat-sidenav #sidenav class="sidebar-sidenav">
+      <h5>{{ Search }} Search </h5>
+      <h5> New User </h5>
+    </mat-sidenav>
   
-  <mat-menu #appMenu="matMenu">
-    <button mat-menu-item> TEXT </button>
-    <button mat-menu-item> MORE TEXT </button>
-  </mat-menu>
-</mat-toolbar>
+    <div>
+      <mat-toolbar color="primary"> 
+          <button type="button" mat-button (click)="sidenav.open()">
+              Menu
+            </button>
 
+          <span>Eagle Software - Security Manager</span>
+   
+        </mat-toolbar>
+            <mat-card class="wrapper">
+              <mat-tab-group>
+                <mat-tab label="Users">
+                  <mat-expansion-panel *ngFor="let user of users; let i = index">
+                    <mat-expansion-panel-header>
+                      User Name: {{ user.name }} <br>
+                      Groups: {{ user.groups}}
+                    </mat-expansion-panel-header>
+                    User Id: {{user.id}} <br>
+                    Email: {{user.email }} <br>
+                    Permissions: I will eventually find a way to dynamically fill this.
+                    <br><br>
+                    <button mat-button>Edit <mat-icon>mode_edit</mat-icon></button>
+                    <button mat-button (click)="openDialog()">Deactivate User <mat-icon>delete</mat-icon></button>
+                  </mat-expansion-panel>
+                </mat-tab>
+                <mat-tab label="Groups"></mat-tab>
+                <mat-tab label="Permissions"></mat-tab>
+              </mat-tab-group>
+              
+            </mat-card>
+            
 
-    <mat-card class="wrapper">
-      <mat-tab-group>
-        <mat-tab label="Users">
-          <mat-expansion-panel *ngFor="let user of users; let i = index">
-            <mat-expansion-panel-header>
-              User Name: {{ user.name }} <br>
-              Groups: {{ user.groups}}
-            </mat-expansion-panel-header>
-            User Id: {{user.id}} <br>
-            Email: {{user.email }} <br>
-            Permissions: I will eventually find a way to dynamically fill this.
-            <br><br>
-            <button mat-button>Edit <mat-icon>mode_edit</mat-icon></button>
-            <button mat-button (click)="openDialog()">Deactivate User <mat-icon>delete</mat-icon></button>
-          </mat-expansion-panel>
-        </mat-tab>
-        <mat-tab label="Groups"></mat-tab>
-        <mat-tab label="Permissions"></mat-tab>
-      </mat-tab-group>
-      
-    </mat-card>
+    </div>
+  
+</mat-sidenav-container>
