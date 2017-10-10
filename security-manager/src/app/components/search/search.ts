@@ -1,11 +1,9 @@
 import {Component} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import {MatInputModule} from '@angular/material';
 
-const SEARCH_REGEX = /^[a-zA-Z0-9*]+)*$/;
+const SEARCH_REGEX = /^[a-zA-Z0-9*]*$/;
 
-/**
- * @title Input Errors
- */
 @Component({
   selector: 'search',
   templateUrl: 'search.html',
