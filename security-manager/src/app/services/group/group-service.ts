@@ -9,10 +9,10 @@ export class Group {
 
 @Injectable()
 export class GroupService {
-    getUsers(): Group[] {
+    getGroups(): Group[] {
         return groups.map(g => new Group(g.id, g.permissions));
       }
-    getUserById(groupId: string): Group {
+    getGroupById(groupId: string): Group {
         return groups.find(g => g.id === groupId);
       }
 }

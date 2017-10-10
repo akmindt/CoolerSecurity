@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import 'rxjs/add/operator/map';
 import {User, UserService} from './services/user/user-service';
+import {Group, GroupService} from './services/group/group-service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,11 @@ import {User, UserService} from './services/user/user-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  myData: Array<any>;
+  users: Array<any>;
+  groups: Array<any>;
 
-  constructor(private userService: UserService) {
-    this.myData = this.userService.getUsers();
+  constructor(private userService: UserService, private groupService: GroupService) {
+    this.users = this.userService.getUsers();
+    this.groups = this.groupService.getGroups();
   }
 }
