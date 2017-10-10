@@ -3,7 +3,6 @@
       <search></search>
       <button mat-button>New User <mat-icon>note_add</mat-icon></button>
     </mat-sidenav>
-  
     <div class="sidebar-container">
       <mat-toolbar color="primary"> 
           <button type="button" mat-button (click)="sidenav.open()">
@@ -12,30 +11,6 @@
 
           <span>Eagle Software - Security Manager</span>
       </mat-toolbar>
-
-          <mat-card class="wrapper">
-            <mat-tab-group>
-              <mat-tab label="Users">
-                <mat-expansion-panel *ngFor="let user of users; let i = index">
-                  <mat-expansion-panel-header>
-                      User Name: {{ user.name }} <br>
-                      Groups: {{ user.groups}}
-                  </mat-expansion-panel-header>
-                    User Id: {{user.id}} <br>
-                    Email: {{user.email }} <br>
-                    Permissions: I will eventually find a way to dynamically fill this.
-                    <br><br>
-                    <button mat-button>Edit <mat-icon>mode_edit</mat-icon></button>
-                    <button mat-button (click)="openDialog()">Deactivate User <mat-icon>delete</mat-icon></button>
-                  </mat-expansion-panel>
-                </mat-tab>
-              <mat-tab label="Groups"></mat-tab>
-              <mat-tab label="Permissions"></mat-tab>
-            </mat-tab-group>
-              
-          </mat-card>
-            
-
+      <app-tab-header></app-tab-header>
     </div>
-  
 </mat-sidenav-container>

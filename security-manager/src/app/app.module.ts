@@ -7,13 +7,18 @@ import {GroupService} from './services/group/group-service';
 import { AppComponent } from './app.component';
 import { Sidebar } from './app.component';
 import { Search } from './components/search/search';
+import { TabHeaderComponent } from './components/tab-header/tab-header';
+import { UserClusterComponent } from './components/user-cluster/user-cluster.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatExpansionModule, MatTabsModule, MatSidenavModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule,
+  MatExpansionModule, MatTabsModule, MatSidenavModule, MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TabHeaderComponent,
+    UserClusterComponent,
     Search
   ],
   imports: [
@@ -32,7 +37,6 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
     MatInputModule,
     ReactiveFormsModule,
     FormsModule
-    
   ],
   providers: [UserService, GroupService],
   bootstrap: [AppComponent]
