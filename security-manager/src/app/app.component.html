@@ -1,15 +1,13 @@
 <mat-sidenav-container class="sidebar-container" mode="side">
     <mat-sidenav #sidenav class="sidebar-sidenav">
       <search></search>
-      <button mat-button>New User <mat-icon>note_add</mat-icon></button>
+      <button mat-button>Security <mat-icon>lock</mat-icon></button>
     </mat-sidenav>
     <div class="sidebar-container">
-      <mat-toolbar color="primary"> 
-          <button type="button" mat-button (click)="sidenav.open()">
-              Menu
-            </button>
+      <mat-toolbar color="blue"> 
+          <button type="button" mat-button (click)="sidenav.open()">Menu</button>
 
-          <span>Eagle Software - Security Manager</span>
+          <span color="light green">Eagle Software - Security Manager</span>
       </mat-toolbar>
       <app-tab-header></app-tab-header>
     </div>

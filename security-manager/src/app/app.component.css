@@ -3,9 +3,14 @@
 }
 
 .sidebar-container{
-  background-color: red;
+  background-color: white;
 }
 
-  .sidebar-sidenav {
-    padding: 10px;
-  }
+.sidebar-sidenav {
+  padding: 10px;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
