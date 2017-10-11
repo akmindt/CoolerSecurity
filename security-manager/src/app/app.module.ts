@@ -9,6 +9,7 @@ import { Sidebar } from './app.component';
 import { Search } from './components/search/search';
 import { TabHeaderComponent } from './components/tab-header/tab-header';
 import { UserClusterComponent } from './components/user-cluster/user-cluster.component';
+import { GroupClusterComponent } from './components/group-cluster/group-cluster.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule,
@@ -22,7 +23,8 @@ import { DeactivationDialog, DeactivationDialogText } from './components/deactiv
     AppComponent,
     TabHeaderComponent,
     UserClusterComponent,
-    Search,
+    GroupClusterComponent,
+    Search, 
     DeactivationDialog,
     DeactivationDialogText
 

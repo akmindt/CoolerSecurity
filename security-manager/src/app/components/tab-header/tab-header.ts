@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserClusterComponent } from '../user-cluster/user-cluster.component';
+import { GroupClusterComponent } from '../group-cluster/group-cluster.component';
 
 @Component({
     selector: 'app-tab-header',
