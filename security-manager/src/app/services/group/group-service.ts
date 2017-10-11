@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core';
 export class Group {
     constructor(
         public id: string,
+        public name: string,
         public permissions: string[]
     ) {}
 }
@@ -10,7 +11,7 @@ export class Group {
 @Injectable()
 export class GroupService {
     getGroups(): Group[] {
-        return groups.map(g => new Group(g.id, g.permissions));
+        return groups.map(g => new Group(g.id, g.name, g.permissions));
       }
     getGroupById(groupId: string): Group {
         return groups.find(g => g.id === groupId);
@@ -20,10 +21,12 @@ export class GroupService {
 const groups = [
     {
         'id': 'tyler',
+        'name': 'Tyler Persona',
         'permissions': ['tyler']
     },
     {
         'id': 'web_user',
+        'name': 'Web User Persona',
         'permissions': ['web_stuff', 'web_payments']
     }
 ];

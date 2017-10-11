@@ -9,12 +9,7 @@ import {MatSidenavModule} from '@angular/material';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  groups: Array<any>;
-
-  constructor(private groupService: GroupService) {
-    this.groups = this.groupService.getGroups();
-  }
+export class AppComponent { 
 }
 
 @Component({
