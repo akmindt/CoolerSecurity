@@ -1,5 +1,5 @@
 import {Component, Inject} from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material';
 
 /**
  * @title Dialog Overview
@@ -16,7 +16,7 @@ export class DeactivationDialog {
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    let dialogRef = this.dialog.open(DeactivationDialogText, {
       width: '250px',
       data: { confirm: this.confirm}
     });
@@ -30,13 +30,13 @@ export class DeactivationDialog {
 }
 
 @Component({
-  selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialog-overview-example-dialog.html',
+  selector: 'deactivation-dialog-text',
+  templateUrl: 'deactivation-dialog-text.html'
 })
-export class DialogOverviewExampleDialog {
+export class DeactivationDialogText {
 
   constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    public dialogRef: MatDialogRef<DeactivationDialogText>,
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   onNoClick(): void {
