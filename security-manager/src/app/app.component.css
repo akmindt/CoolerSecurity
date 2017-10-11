@@ -1,7 +1,11 @@
 .example-spacer{
     flex: 1 1 auto;
 }
-   
+
+.sidebar-container{
+  background-color: red;
+}
+
   .sidebar-sidenav {
     padding: 10px;
   }
