@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {User, UserService} from '../../services/user/user-service';
+import {DeactivationDialog, DeactivationDialogText} from '../deactivation-dialog/deactivation-dialog';
+import {MatDialog, MatDialogRef} from '@angular/material';
 
 @Component({
     selector: 'app-user-cluster',

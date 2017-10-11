@@ -7,6 +7,9 @@
         Email: {{user.email }} <br>
         Permissions: I will eventually find a way to dynamically fill this.
         <br><br>
-        <button mat-button>Edit <mat-icon>mode_edit</mat-icon></button>
-        <button mat-button (click)="openDialog()">Deactivate User <mat-icon>delete</mat-icon></button>
+        <span>
+            <button mat-button>Edit <mat-icon>mode_edit</mat-icon></button>
+            <deactivation-dialog></deactivation-dialog>
+        </span>
+        <!--<button mat-button (click)="openDialog()">Deactivate User <mat-icon>delete</mat-icon></button>-->
 </mat-expansion-panel>
