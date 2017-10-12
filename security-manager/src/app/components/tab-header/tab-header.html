@@ -1,11 +1,17 @@
 <mat-card>
-    <mat-tab-group>
+    <mat-tab-group [(selectedIndex)]="selectedTabIndex">
         <mat-tab label="Users">
-            <app-user-cluster></app-user-cluster>
+            <div>
+                <app-user-cluster></app-user-cluster>
+            </div>
         </mat-tab>
         <mat-tab label="Groups">
-            <app-group-cluster></app-group-cluster>
+            <div *ngIf="selectedTabIndex == 1">
+                <app-group-cluster></app-group-cluster>
+            </div>
         </mat-tab>
         <mat-tab label="Permissions"></mat-tab>
+            <div *ngIf="selectedIndex == 2">
+            </div>
     </mat-tab-group>
 </mat-card>
