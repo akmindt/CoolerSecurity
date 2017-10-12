@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, Input} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material';
 
 /**
@@ -11,6 +11,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, MatDialogModule} from '@angula
 
 export class DeactivationDialog {
 
+  @Input() user:string;
+
   confirm: boolean;
 
   constructor(public dialog: MatDialog) {}
@@ -18,7 +20,7 @@ export class DeactivationDialog {
   openDialog(): void {
     let dialogRef = this.dialog.open(DeactivationDialogText, {
       width: '250px',
-      data: { confirm: this.confirm}
+      data: {confirm: this.confirm, user: this.user}
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -34,13 +36,16 @@ export class DeactivationDialog {
   templateUrl: 'deactivation-dialog-text.html'
 })
 export class DeactivationDialogText {
-
+  
+  @Input() user:string;
+ 
   constructor(
     public dialogRef: MatDialogRef<DeactivationDialogText>,
+    
     @Inject(MAT_DIALOG_DATA) public data: any) { }
 
   onNoClick(): void {
-    this.dialogRef.close();
+  this.dialogRef.close();
   }
 
 }
