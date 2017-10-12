@@ -19,7 +19,6 @@ export class DeactivationDialog {
 
   openDialog(): void {
     let dialogRef = this.dialog.open(DeactivationDialogText, {
-      width: '250px',
       data: {confirm: this.confirm, user: this.user}
     });
 
