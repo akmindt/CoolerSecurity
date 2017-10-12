@@ -1,0 +1,29 @@
+
+<h2 mat-dialog-title>New User</h2>
+
+<div>
+    <mat-form-field>
+        <input matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="UserID">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput placeholder="Job Title">
+    </mat-form-field>
+  
+    <mat-form-field>
+        <mat-select placeholder="Security Group">
+            <mat-option value="1">Tyler</mat-option>
+            <mat-option value="2">Admin</mat-option>
+            <mat-option value="3">Cashiering</mat-option>
+            <mat-option value="4">Finance</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<span style="display:table; margin:0 auto;">
+    <button mat-button mat-dialog-close tabindex="-1" (click)="addUser()">Save</button>
+    <button mat-button mat-dialog-close (click)="closeDialog()">Cancel</button>
+</span>

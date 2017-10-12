@@ -13,9 +13,10 @@ import { GroupClusterComponent } from './components/group-cluster/group-cluster.
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule,
-  MatExpansionModule, MatTabsModule, MatSidenavModule, MatInputModule, MatDialogModule } from '@angular/material';
+  MatExpansionModule, MatTabsModule, MatSidenavModule, MatInputModule, MatDialogModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 import { DeactivationDialog, DeactivationDialogText } from './components/deactivation-dialog/deactivation-dialog';
+import { NewUser, NewUserForm } from './components/new-user-form/new-user-form'
 
 
 @NgModule({
@@ -26,12 +27,15 @@ import { DeactivationDialog, DeactivationDialogText } from './components/deactiv
     GroupClusterComponent,
     Search, 
     DeactivationDialog,
-    DeactivationDialogText
+    DeactivationDialogText,
+    NewUser,
+    NewUserForm
 
   ],
 
   entryComponents:[
-    DeactivationDialogText
+    DeactivationDialogText,
+    NewUserForm
 
   ],
 
@@ -51,7 +55,10 @@ import { DeactivationDialog, DeactivationDialogText } from './components/deactiv
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [UserService, GroupService],
   bootstrap: [AppComponent]
