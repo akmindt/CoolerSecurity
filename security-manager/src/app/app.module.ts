@@ -16,7 +16,8 @@ import { MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIco
   MatExpansionModule, MatTabsModule, MatSidenavModule, MatInputModule, MatDialogModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 import { DeactivationDialog, DeactivationDialogText } from './components/deactivation-dialog/deactivation-dialog';
-import { NewUser, NewUserForm } from './components/new-user-form/new-user-form'
+import { NewUser, NewUserForm } from './components/new-user-form/new-user-form';
+import { SidebarContentsComponent } from './components/sidebar-contents/sidebar-contents.component';
 
 
 @NgModule({
@@ -29,8 +30,8 @@ import { NewUser, NewUserForm } from './components/new-user-form/new-user-form'
     DeactivationDialog,
     DeactivationDialogText,
     NewUser,
-    NewUserForm
-
+    NewUserForm,
+    SidebarContentsComponent
   ],
 
   entryComponents:[
